@@ -1,0 +1,97 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Merge multiple sample FASTAs", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Reference FASTAs"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 282
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Reference FASTAs\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "51a92c24-ce2f-4aa0-8f7f-7b020f9dd07c", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "d797c71a-295f-4d84-981a-68c482d875c5"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.1", 
+            "id": 1, 
+            "input_connections": {
+                "inputs": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FASTA Merge Files and Filter Unique Sequences", 
+                    "name": "inputs"
+                }
+            ], 
+            "label": null, 
+            "name": "FASTA Merge Files and Filter Unique Sequences", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 460.5, 
+                "top": 264
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }, 
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "#{inputs|basename}.fasta"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "9ad0d336e5ed", 
+                "name": "fasta_merge_files_and_filter_unique_sequences", 
+                "owner": "galaxyp", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"inputs\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"accession_parser\": \"\\\"^>(generic\\\\\\\\|[^|]+)\\\"\", \"uniqueness_criterion\": \"\\\"accession\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": 0}", 
+            "tool_version": "1.1", 
+            "type": "tool", 
+            "uuid": "None", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "6a7a5afb-0b48-428d-b1ae-47022a09a4f9"
+}

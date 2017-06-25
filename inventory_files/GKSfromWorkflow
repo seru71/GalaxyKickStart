@@ -1,0 +1,6 @@
+
+[GKSfromWorkflow]
+#localhost ansible_connection=local
+
+# if remote target, replace the above line by
+192.54.201.134 ansible_ssh_user="root" ansible_ssh_private_key_file="~/.ssh/ifb_dsa"
