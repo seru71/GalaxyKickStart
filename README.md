@@ -1,4 +1,10 @@
-[![Build Status](https://travis-ci.org/ARTbio/GalaxyKickStart.svg?branch=master)](https://travis-ci.org/ARTbio/GalaxyKickStart)
+
+Galaxy KickStart instance deployed at ZAO. 
+Forked from https://github.com/ARTbio/GalaxyKickStart
+Before executing, IP of the VM must be provided in inventory_files/zao-galaxy
+
+Original README of the forked version below.
+
 
 # GalaxyKickStart
 

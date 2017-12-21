@@ -1,0 +1,8 @@
+
+
+galaxy_tools_tool_list_files:
+  - "extra-files/zao_galaxy/zao_galaxy_tool_list.yml"
+#  - "extra-files/zao_galaxy/usegalaxy_main_tool_list.yml"
+additional_files_list:
+  - { src: "extra-files/zao_galaxy/logo.png", dest: "{{ galaxy_server_dir }}/static/images/" }
+  - { src: "extra-files/tool_sheds_conf.xml", dest: "{{ galaxy_config_dir }}" }
